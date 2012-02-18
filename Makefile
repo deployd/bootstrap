@@ -39,13 +39,15 @@ bootstrap:
 	uglifyjs -nc bootstrap/js/bootstrap.js > bootstrap/js/bootstrap.min.js
 
 #
-# MAKE FOR GH-PAGES 4 FAT & MDO ONLY (O_O  )
+#  by ritch, no need to checkout branches in separate dirs
 #
 
 gh-pages: docs
-	rm -f ../bootstrap-gh-pages/assets/bootstrap.zip
-	node docs/build production
-	cp -r docs/* ../bootstrap-gh-pages
+	rm -fr /tmp/docs \
+	&& cp -fr docs /tmp/docs \
+	&& git checkout gh-pages \
+	&& cp -fr /tmp/docs/* . \
+	&& echo "done"
 
 #
 # WATCH LESS FILES
