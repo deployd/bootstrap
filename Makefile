@@ -42,6 +42,7 @@ bootstrap:
 #
 
 gh-pages: docs
+	git commit -am 'docs'
 	rm -fr /tmp/docs \
 	&& cp -fr docs /tmp/docs \
 	&& git checkout gh-pages \
