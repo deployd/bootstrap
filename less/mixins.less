@@ -390,10 +390,10 @@
 
 // Add an alphatransparency value to any background or border color (via Elyse Holladay)
 #translucent {
-  .background(@color: @white, @alpha: 1) {
+  .background(@color: @foreground, @alpha: 1) {
     background-color: hsla(hue(@color), saturation(@color), lightness(@color), @alpha);
   }
-  .border(@color: @white, @alpha: 1) {
+  .border(@color: @foreground, @alpha: 1) {
     border-color: hsla(hue(@color), saturation(@color), lightness(@color), @alpha);
     .background-clip(padding-box);
   }
@@ -479,14 +479,21 @@
 // ---------------------------------------
 .buttonBackground(@startColor, @endColor) {
   // gradientBar will set the background to a pleasing blend of these, to support IE<=9
-  .gradientBar(@startColor, @endColor);
+    
+  #gradient > .vertical-three-colors(@startColor, @startColor, 50%, darken(spin(@startColor, -25), 7%));
+  
   .reset-filter();
 
   // in these cases the gradient won't cover the background, so we override
   &:hover, &:active, &.active, &.disabled, &[disabled] {
     background-color: @endColor;
   }
-
+  
+  border-top: solid 1px lighten(@startColor, 20%);
+  border-left: solid 1px lighten(@startColor, 10%);
+  border-bottom: solid 1px darken(@endColor, 30%);
+  border-right: solid 1px darken(@endColor, 20%);
+  
   // IE 7 + 8 can't handle box-shadow to show active, so we darken a bit ourselves
   &:active,
   &.active {
@@ -508,7 +515,7 @@
     margin-left: -@arrowWidth;
     border-left: @arrowWidth solid transparent;
     border-right: @arrowWidth solid transparent;
-    border-top: @arrowWidth solid @black;
+    border-top: @arrowWidth solid @background;
   }
   .left(@arrowWidth: 5px) {
     top: 50%;
@@ -516,7 +523,7 @@
     margin-top: -@arrowWidth;
     border-top: @arrowWidth solid transparent;
     border-bottom: @arrowWidth solid transparent;
-    border-left: @arrowWidth solid @black;
+    border-left: @arrowWidth solid @background;
   }
   .bottom(@arrowWidth: 5px) {
     top: 0;
@@ -524,7 +531,7 @@
     margin-left: -@arrowWidth;
     border-left: @arrowWidth solid transparent;
     border-right: @arrowWidth solid transparent;
-    border-bottom: @arrowWidth solid @black;
+    border-bottom: @arrowWidth solid @background;
   }
   .right(@arrowWidth: 5px) {
     top: 50%;
@@ -532,6 +539,6 @@
     margin-top: -@arrowWidth;
     border-top: @arrowWidth solid transparent;
     border-bottom: @arrowWidth solid transparent;
-    border-right: @arrowWidth solid @black;
+    border-right: @arrowWidth solid @background;
   }
 }

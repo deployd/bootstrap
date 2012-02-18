@@ -2,44 +2,68 @@
 // Variables to customize the look and feel of Bootstrap
 // -----------------------------------------------------
 
-
+// THE GOLDEN RATIO
+@goldenRatio: 1.61803399;
+@dratio: 19%;
 
 // GLOBAL VALUES
 // --------------------------------------------------
 
-// Links
-@linkColor:             #08c;
-@linkColorHover:        darken(@linkColor, 15%);
+// Page
+@bodyBackground:        #000;
 
 // Grays
-@black:                 #000;
-@grayDarker:            #222;
-@grayDark:              #333;
-@gray:                  #555;
-@grayLight:             #999;
-@grayLighter:           #eee;
-@white:                 #fff;
+@background:            #200200;
+@grayDarker:            #391715;
+@grayDark:              #542926;
+@gray:                  #6d413e;
+@grayLight:             #9d7977;
+@grayLighter:           #ccb3b2;
+@foreground:            #fff;
+
+// Links
+@linkColor:             lighten(@blue, 20%);
+@linkColorHover:        darken(@linkColor, 15%);
 
 // Accent colors
-@blue:                  #049cdb;
-@blueDark:              #0064cd;
-@green:                 #46a546;
-@red:                   #9d261d;
-@yellow:                #ffc40d;
-@orange:                #f89406;
-@pink:                  #c3325f;
-@purple:                #7a43b6;
+@blue:                  #429e96;
+@blueDark:              #215570;
+@green:                 #668731;
+@red:                   #8b0e0c;
+@yellow:                #e0ae28;
+@orange:                #cc5a01;
+@pink:                  #db3e3f;
+@purple:                #bf5b77;
+@brandColor:            #389286;
 
 // Typography
 @baseFontSize:          13px;
 @baseFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif;
 @baseLineHeight:        18px;
-@textColor:             @grayDark;
+@textColor:             @foreground;
+
+// Element Typography
+@codeColor:               lighten(@yellow, 40%);
+@formColor:               @foreground;
+@navColor:                @foreground;
+@navColorHi:              darken(@foreground, 20%);
 
 // Buttons
-@primaryButtonBackground:    @linkColor;
+@primaryButtonBackground:    @yellow;
 
+// Backgrounds
+@background:            #97170d;
+@wellBackground:        desaturate(darken(@background, @dratio), @dratio);
+@wellLightBackground:   lighten(@wellBackground, @dratio);
+@tableBackground:       @wellBackground;
+@codeBackground:        darken(@background, @dratio);
+@preBackground:         desaturate(@codeBackground, @dratio);
+@navBackground:         @background;
 
+// Tables
+@border:                solid 1px darken(@tableBackground, @dratio);
+@tableBorder:           @border;
+@formBorder:            @border;
 
 // COMPONENT VARIABLES
 // --------------------------------------------------
@@ -55,33 +79,33 @@
 @zindexModal:           1050;
 
 // Input placeholder text color
-@placeholderText:       @grayLight;
+@placeholderText:       @foreground;
 
 // Navbar
-@navbarHeight:                    40px;
-@navbarBackground:                @grayDarker;
-@navbarBackgroundHighlight:       @grayDark;
+@navbarHeight:                    30px;
+@navbarBackground:                #efd895;
+@navbarBackgroundHighlight:       @foreground;
 
-@navbarText:                      @grayLight;
-@navbarLinkColor:                 @grayLight;
-@navbarLinkColorHover:            @white;
+@navbarText:                      @background;
+@navbarLinkColor:                 @background;
+@navbarLinkColorHover:            @linkColor;
 
 // Form states and alerts
-@warningText:             #c09853;
-@warningBackground:       #fcf8e3;
-@warningBorder:           darken(spin(@warningBackground, -10), 3%);
+@warningText:             darken(@yellow, 30);
+@warningBackground:       lighten(@yellow, 20);
+@warningBorder:           darken(spin(@warningBackground, -10), 30%);
 
-@errorText:               #b94a48;
-@errorBackground:         #f2dede;
-@errorBorder:             darken(spin(@errorBackground, -10), 3%);
+@errorText:               darken(@red, 30);
+@errorBackground:         lighten(@red, 10);
+@errorBorder:             darken(spin(@errorBackground, -10), 10%);
 
-@successText:             #468847;
-@successBackground:       #dff0d8;
-@successBorder:           darken(spin(@successBackground, -10), 5%);
+@successText:             darken(@green, 30);
+@successBackground:       lighten(@green, 20);
+@successBorder:           darken(spin(@successBackground, -10), 30%);
 
-@infoText:                #3a87ad;
-@infoBackground:          #d9edf7;
-@infoBorder:              darken(spin(@infoBackground, -10), 7%);
+@infoText:                darken(@blue, 30);
+@infoBackground:          lighten(@blue, 20);
+@infoBorder:              darken(spin(@infoBackground, -10), 30%);
 
 
 

@@ -11,6 +11,8 @@ table {
   max-width: 100%;
   border-collapse: collapse;
   border-spacing: 0;
+  background: @tableBackground;
+  border-color: darken(@tableBackground, @dratio);
 }
 
 // BASELINE STYLES
@@ -25,7 +27,7 @@ table {
     padding: 8px;
     line-height: @baseLineHeight;
     text-align: left;
-    border-top: 1px solid #ddd;
+    border-top: @tableBorder;
   }
   th {
     font-weight: bold;
@@ -41,7 +43,7 @@ table {
   }
   // Account for multiple tbody instances
   tbody + tbody {
-    border-top: 2px solid #ddd;
+    border-top: 2px solid;
   }
 }
 
@@ -62,7 +64,7 @@ table {
 // ----------------
 
 .table-bordered {
-  border: 1px solid #ddd;
+  border: @tableBorder;
   border-collapse: separate; // Done so we can round those corners!
   *border-collapse: collapsed; // IE7 can't round corners anyway
   .border-radius(4px);
@@ -70,7 +72,7 @@ table {
   td + td,
   th + td,
   td + th {
-    border-left: 1px solid #ddd;
+    border-left: @tableBorder;
   }
   // Prevent a double border
   thead:first-child tr:first-child th,
@@ -107,7 +109,7 @@ table {
   tbody {
     tr:nth-child(odd) td,
     tr:nth-child(odd) th {
-      background-color: #f9f9f9;
+      background-color: lighten(desaturate(@tableBackground, @dratio), 3);
     }
   }
 }

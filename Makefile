@@ -56,4 +56,4 @@ watch:
 	watchr -e "watch('less/.*\.less') { system 'make' }"
 
 
-.PHONY: dist docs watch gh-pages
+.PHONY: dist docs watch gh-pages bootstrap

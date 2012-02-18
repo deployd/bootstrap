@@ -13,10 +13,10 @@
     <![endif]-->
 
     <!-- Le styles -->
+    <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
     <link href="assets/css/bootstrap.css" rel="stylesheet">
     <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
     <link href="assets/css/docs.css" rel="stylesheet">
-    <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
 
     <!-- Le fav and touch icons -->
     <link rel="shortcut icon" href="assets/ico/favicon.ico">
@@ -204,7 +204,7 @@
       <table class="table table-bordered table-striped">
         <tbody>
           <tr>
-            <td class="span2"><code>@black</code></td>
+            <td class="span2"><code>@background</code></td>
             <td>#000</td>
             <td class="swatch-col"><span class="swatch" style="background-color: #000;"></span></td>
           </tr>
@@ -234,7 +234,7 @@
             <td><span class="swatch" style="background-color: #eee;"></span></td>
           </tr>
           <tr>
-            <td><code>@white</code></td>
+            <td><code>@foreground</code></td>
             <td>#fff</td>
             <td><span class="swatch swatch-bordered" style="background-color: #fff;"></span></td>
           </tr>
@@ -336,7 +336,7 @@
           </tr>
           <tr>
             <td><code>@navbarLinkColorHover</code></td>
-            <td><code>@white</code></td>
+            <td><code>@foreground</code></td>
             <td><span class="swatch swatch-bordered" style="background-color: #fff;"></span></td>
           </tr>
         </tbody>
@@ -655,12 +655,12 @@
     <tbody>
       <tr>
         <td><code>.#translucent > .background()</code></td>
-        <td><code>@color: @white, @alpha: 1</code></td>
+        <td><code>@color: @foreground, @alpha: 1</code></td>
         <td>Give an element a translucent background color</td>
       </tr>
       <tr>
         <td><code>.#translucent > .border()</code></td>
-        <td><code>@color: @white, @alpha: 1</code></td>
+        <td><code>@color: @foreground, @alpha: 1</code></td>
         <td>Give an element a translucent border color</td>
       </tr>
       <tr>

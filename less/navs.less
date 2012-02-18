@@ -18,10 +18,8 @@
 }
 .nav > li > a:hover {
   text-decoration: none;
-  background-color: @grayLighter;
+  background-color: desaturate(darken(@linkColor, 45), 50); 
 }
-
-
 
 // NAV LIST
 // --------
@@ -43,7 +41,7 @@
   font-size: 11px;
   font-weight: bold;
   line-height: @baseLineHeight;
-  color: @grayLight;
+  color: @navColor;
   text-transform: uppercase;
 }
 .nav-list > li + .nav-header {
@@ -51,7 +49,7 @@
 }
 .nav-list .active > a,
 .nav-list .active > a:hover {
-  color: @white;
+  color: @foreground;
   text-shadow: 0 -1px 0 rgba(0,0,0,.2);
   background-color: @linkColor;
 }
@@ -86,7 +84,7 @@
 
 // Give the tabs something to sit on
 .nav-tabs {
-  border-bottom: 1px solid #ddd;
+  border-bottom: @border;
 }
 
 // Make the list-items overlay the bottom border
@@ -101,15 +99,15 @@
   border: 1px solid transparent;
   .border-radius(4px 4px 0 0);
   &:hover {
-    border-color: @grayLighter @grayLighter #ddd;
+    border-color: @navColor @navColor @navColorHi;
   }
 }
 // Active state, and it's :hover to override normal :hover
 .nav-tabs > .active > a,
 .nav-tabs > .active > a:hover {
-  color: @gray;
-  background-color: @white;
-  border: 1px solid #ddd;
+  color: @navColorHi;
+  background-color: @navBackground;
+  border: 1px solid @navColorHi;
   border-bottom-color: transparent;
   cursor: default;
 }
@@ -129,7 +127,7 @@
 // Active state
 .nav-pills .active > a,
 .nav-pills .active > a:hover {
-  color: @white;
+  color: @navColor;
   background-color: @linkColor;
 }
 
@@ -151,7 +149,7 @@
   border-bottom: 0;
 }
 .nav-tabs.nav-stacked > li > a {
-  border: 1px solid #ddd;
+  border: 1px solid @navColorHi;
   .border-radius(0);
 }
 .nav-tabs.nav-stacked > li:first-child > a {
@@ -161,7 +159,7 @@
   .border-radius(0 0 4px 4px);
 }
 .nav-tabs.nav-stacked > li > a:hover {
-  border-color: #ddd;
+  border-color: @navColorHi;
   z-index: 2;
 }
 
@@ -211,7 +209,7 @@
 // Active:hover dropdown links
 // -------------------------
 .nav > .dropdown.active > a:hover {
-  color: @black;
+  color: @background;
   cursor: pointer;
 }
 
@@ -220,14 +218,14 @@
 .nav-tabs .open .dropdown-toggle,
 .nav-pills .open .dropdown-toggle,
 .nav > .open.active > a:hover {
-  color: @white;
+  color: @foreground;
   background-color: @grayLight;
   border-color: @grayLight;
 }
 .nav .open .caret,
 .nav .open.active .caret,
 .nav .open a:hover .caret {
-  border-top-color: @white;
+  border-top-color: @foreground;
   .opacity(100);
 }
 
@@ -321,7 +319,7 @@
 .tabs-left .nav-tabs .active > a,
 .tabs-left .nav-tabs .active > a:hover {
   border-color: #ddd transparent #ddd #ddd;
-  *border-right-color: @white;
+  *border-right-color: @foreground;
 }
 
 // Tabs on the right
@@ -340,5 +338,5 @@
 .tabs-right .nav-tabs .active > a,
 .tabs-right .nav-tabs .active > a:hover {
   border-color: #ddd #ddd #ddd transparent;
-  *border-left-color: @white;
+  *border-left-color: @foreground;
 }

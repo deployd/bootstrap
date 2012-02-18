@@ -8,6 +8,7 @@
 .navbar {
   overflow: visible;
   margin-bottom: @baseLineHeight;
+  border-bottom: solid 1px darken(@navbarBackground, 30);
 }
 
 // Gradient is applied to it's own element because overflow visible is not honored by IE when filter is present
@@ -16,7 +17,7 @@
   padding-right: 20px;
   #gradient > .vertical(@navbarBackgroundHighlight, @navbarBackground);
   .border-radius(4px);
-  @shadow: 0 1px 3px rgba(0,0,0,.25), inset 0 -1px 0 rgba(0,0,0,.1);
+  @shadow: 0 3px 9px rgba(0,0,0,.25), inset 0 -1px 0 rgba(0,0,0,.1);
   .box-shadow(@shadow);
 }
 
@@ -63,7 +64,7 @@
     font-size: 20px;
     font-weight: 200;
     line-height: 1;
-    color: @white;
+    color: @brandColor;
   }
   // Plain text in topbar
   .navbar-text {
@@ -71,7 +72,7 @@
     line-height: 40px;
     color: @navbarText;
     a:hover {
-      color: @white;
+      color: @foreground;
       background-color: transparent;
     }
   }
@@ -115,12 +116,12 @@
   .search-query {
     padding: 4px 9px;
     #font > .sans-serif(13px, normal, 1);
-    color: @white;
+    color: @background;
     color: rgba(255,255,255,.75);
     background: #666;
     background: rgba(255,255,255,.3);
-    border: 1px solid #111;
-    @shadow: inset 0 1px 2px rgba(0,0,0,.1), 0 1px 0px rgba(255,255,255,.15);
+    border: solid 1px @navbarBackgroundHighlight;
+    @shadow: inset 0 1px 2px rgba(0,0,0,.15), 0 1px 0px rgba(255,255,255,.15);
     .box-shadow(@shadow);
     .transition(none);
 
@@ -129,7 +130,7 @@
 
     // Hover states
     &:hover {
-      color: @white;
+      color: @foreground;
       background-color: @grayLight;
       background-color: rgba(255,255,255,.5);
     }
@@ -138,8 +139,8 @@
     &.focused {
       padding: 5px 10px;
       color: @grayDark;
-      text-shadow: 0 1px 0 @white;
-      background-color: @white;
+      text-shadow: 0 1px 0 @foreground;
+      background-color: @foreground;
       border: 0;
       .box-shadow(0 0 3px rgba(0,0,0,.15));
       outline: 0;
@@ -204,8 +205,9 @@
 .navbar .nav .active > a:hover {
   color: @navbarLinkColorHover;
   text-decoration: none;
-  background-color: @navbarBackground;
-  background-color: rgba(0,0,0,.5);
+  #gradient > .vertical(@navbarBackgroundHighlight, darken(@navbarBackground, 9));
+  @shadow: 0 0 9px rgba(0,0,0,.12);
+  .box-shadow(@shadow);
 }
 
 // Dividers (basically a vertical hr)
@@ -249,7 +251,7 @@
     display: inline-block;
     border-left:   6px solid transparent;
     border-right:  6px solid transparent;
-    border-bottom: 6px solid @white;
+    border-bottom: 6px solid @foreground;
     position: absolute;
     top: -6px;
     left: 10px;
@@ -259,7 +261,7 @@
 // Dropdown toggle caret
 .navbar .nav .dropdown-toggle .caret,
 .navbar .nav .open.dropdown .caret {
-  border-top-color: @white;
+  border-top-color: @foreground;
 }
 .navbar .nav .active .caret {
   .opacity(100);
@@ -274,7 +276,7 @@
 
 // Dropdown link on hover
 .navbar .nav .active > .dropdown-toggle:hover {
-  color: @white;
+  color: @foreground;
 }
 
 // Right aligned menus need alt position

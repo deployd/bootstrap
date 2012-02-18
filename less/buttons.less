@@ -14,8 +14,7 @@
   color: @grayDark;
   text-align: center;
   text-shadow: 0 1px 1px rgba(255,255,255,.75);
-  #gradient > .vertical-three-colors(@white, @white, 25%, darken(@white, 10%)); // Don't use .gradientbar() here since it does a three-color gradient
-  border: 1px solid #ccc;
+  #gradient > .vertical-three-colors(@foreground, @foreground, 25%, darken(@foreground, 10%)); // Don't use .gradientbar() here since it does a three-color gradient
   border-bottom-color: #bbb;
   .border-radius(4px);
   @shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
@@ -28,14 +27,7 @@
 
 // Hover state
 .btn:hover {
-  color: @grayDark;
   text-decoration: none;
-  background-color: darken(@white, 10%);
-  background-position: 0 -15px;
-
-  // transition is only when going to hover, otherwise the background
-  // behind the gradient (there for IE<=9 fallback) gets mismatched
-  .transition(background-position .1s linear);
 }
 
 // Focus state for keyboard and accessibility
@@ -49,8 +41,8 @@
   background-image: none;
   @shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05);
   .box-shadow(@shadow);
-  background-color: darken(@white, 10%);
-  background-color: darken(@white, 15%) e("\9");
+  background-color: darken(@foreground, 10%);
+  background-color: darken(@foreground, 15%) e("\9");
   color: rgba(0,0,0,.5);
   outline: 0;
 }
@@ -60,8 +52,8 @@
 .btn[disabled] {
   cursor: default;
   background-image: none;
-  background-color: darken(@white, 10%);
-  .opacity(65);
+  background-color: darken(@foreground, 10%);
+  .opacity(50);
   .box-shadow(none);
 }
 
@@ -96,6 +88,7 @@
 
 // Set text color
 // -------------------------
+.btn,
 .btn-primary,
 .btn-primary:hover,
 .btn-warning,
@@ -107,9 +100,10 @@
 .btn-info,
 .btn-info:hover {
   text-shadow: 0 -1px 0 rgba(0,0,0,.25);
-  color: @white;
+  color: @foreground;
 }
 // Provide *some* extra contrast for those who can get it
+.btn,
 .btn-primary.active,
 .btn-warning.active,
 .btn-danger.active,
@@ -120,24 +114,30 @@
 
 // Set the backgrounds
 // -------------------------
+.btn {
+  .buttonBackground(desaturate(@background, 80), desaturate(@background, 80));
+  color: #fff;
+}
+
 .btn-primary {
-  .buttonBackground(@primaryButtonBackground, spin(@primaryButtonBackground, 20));
+  .buttonBackground(@primaryButtonBackground, @primaryButtonBackground);
 }
 // Warning appears are orange
-.btn-warning {
-  .buttonBackground(lighten(@orange, 15%), @orange);
+.btn-warning {  
+  .buttonBackground(@orange, @orange);
 }
 // Danger and error appear as red
 .btn-danger {
-  .buttonBackground(#ee5f5b, #bd362f);
+  .buttonBackground(@red, @red);
+  border-top: solid 1px lighten(@red, 5%);
 }
 // Success appears as green
 .btn-success {
-  .buttonBackground(#62c462, #51a351);
+  .buttonBackground(@green, @green);
 }
 // Info appears as a neutral blue
 .btn-info {
-  .buttonBackground(#5bc0de, #2f96b4);
+  .buttonBackground(@blue, @blue);
 }
 
 

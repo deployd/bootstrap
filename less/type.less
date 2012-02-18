@@ -13,7 +13,7 @@ p {
   line-height: @baseLineHeight;
   small {
     font-size: @baseFontSize - 2;
-    color: @grayLight;
+    color: @foreground;
   }
 }
 .lead {
@@ -29,11 +29,11 @@ p {
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   font-weight: bold;
-  color: @grayDark;
+  color: @foreground;
   text-rendering: optimizelegibility; // Fix the character spacing for headings
   small {
     font-weight: normal;
-    color: @grayLight;
+    color: @foreground;
   }
 }
 h1 {
@@ -138,7 +138,7 @@ hr {
   margin: @baseLineHeight 0;
   border: 0;
   border-top: 1px solid #e5e5e5;
-  border-bottom: 1px solid @white;
+  border-bottom: 1px solid @foreground;
 }
 
 // Emphasis
@@ -149,7 +149,8 @@ em {
   font-style: italic;
 }
 .muted {
-  color: @grayLight;
+  color: desaturate(lighten(@background, 20%), 30%);
+  text-shadow: 0 1px 0 rgba(0,0,0,0.8);
 }
 
 // Abbreviations and acronyms
