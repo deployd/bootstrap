@@ -47,8 +47,6 @@ gh-pages: docs
 	&& cp -fr docs /tmp/docs \
 	&& git checkout gh-pages \
 	&& cp -fr /tmp/docs/* . \
-	&& git add .
-	&& git commit -am 'gh pages'
 	&& echo "done"
 
 #
