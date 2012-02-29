@@ -11,6 +11,7 @@
 
 // Page
 @bodyBackground:        #000;
+@dpdbrown:							#4e2918;
 
 // Grays
 @background:            #200200;
@@ -22,7 +23,7 @@
 @foreground:            #fff;
 
 // Links
-@linkColor:             lighten(@blue, 20%);
+@linkColor:             #eee;
 @linkColorHover:        darken(@linkColor, 15%);
 
 // Accent colors
@@ -83,11 +84,11 @@
 
 // Navbar
 @navbarHeight:                    30px;
-@navbarBackground:                #efd895;
-@navbarBackgroundHighlight:       @foreground;
+@navbarBackground:                @dpdbrown;
+@navbarBackgroundHighlight:       lighten(@dpdbrown, 10%);
 
-@navbarText:                      @background;
-@navbarLinkColor:                 @background;
+@navbarText:                      @foreground;
+@navbarLinkColor:                 @foreground;
 @navbarLinkColorHover:            @linkColor;
 
 // Subnav
