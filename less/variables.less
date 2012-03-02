@@ -12,6 +12,7 @@
 // Page
 @bodyBackground:        #000;
 @dpdbrown:							#4e2918;
+@transparentBackground: rgba(48,5,5, 0.25);
 
 // Grays
 @background:            #200200;
@@ -45,7 +46,7 @@
 
 // Element Typography
 @codeColor:               lighten(@yellow, 40%);
-@formColor:               @foreground;
+@formColor:               @dpdbrown;
 @navColor:                @foreground;
 @navColorHi:              darken(@foreground, 20%);
 
@@ -116,6 +117,13 @@
 @infoBackground:          lighten(@blue, 20);
 @infoBorder:              darken(spin(@infoBackground, -10), 30%);
 
+//Modal Styles
+@modalBackground:							#fff;
+@modalHeaderBackground: 			#f5f5f5;
+@modalHeaderColor:						darken(@dpdbrown, 10%);
+@modalBorderColor:						darken(@dpdbrown, 10%);
+@modalFooterBackground:				#f5f5f5;
+@modalBodyColor:							lighten(@dpdbrown, 10%);
 
 
 // GRID
