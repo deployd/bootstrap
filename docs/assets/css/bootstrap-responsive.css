@@ -348,7 +348,7 @@
   .navbar .dropdown-menu a {
     padding: 6px 15px;
     font-weight: bold;
-    color: #97170d;
+    color: #ffffff;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
@@ -358,7 +358,7 @@
   }
   .navbar .nav > li > a:hover,
   .navbar .dropdown-menu a:hover {
-    background-color: #efd895;
+    background-color: #390905;
   }
   .navbar .dropdown-menu {
     position: static;
@@ -390,8 +390,8 @@
     float: none;
     padding: 9px 15px;
     margin: 9px 0;
-    border-top: 1px solid #efd895;
-    border-bottom: 1px solid #efd895;
+    border-top: 1px solid #390905;
+    border-bottom: 1px solid #390905;
     -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
     -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
