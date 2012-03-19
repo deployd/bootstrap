@@ -51,8 +51,8 @@
   padding: 4px 0;
   margin: 0; // override default ul
   list-style: none;
-  background-color: @foreground;
-  border-color: #ccc;
+  background-color: rgba(48,5,5, 0.95);
+  border-color: darken(@background, 20%);
   border-color: rgba(0,0,0,.2);
   border-style: solid;
   border-width: 1px;
@@ -76,8 +76,8 @@
     height: 1px;
     margin: 5px 1px;
     overflow: hidden;
-    background-color: #e5e5e5;
-    border-bottom: 1px solid @foreground;
+    background-color: darken(@background, 20%);
+    border-bottom: 1px solid @background;
 
     // IE7 needs a set width since we gave a height. Restricting just
     // to IE7 to keep the 1px left/right space in other browsers.
@@ -94,7 +94,7 @@
     clear: both;
     font-weight: normal;
     line-height: 18px;
-    color: @gray;
+    color: @foreground;
     white-space: nowrap;
   }
 }
@@ -105,7 +105,7 @@
 .dropdown-menu .active > a:hover {
   color: @foreground;
   text-decoration: none;
-  background-color: @linkColor;
+  background-color: @background;
 }
 
 // Open state for the dropdown
