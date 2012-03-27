@@ -952,10 +952,10 @@ select:focus:required:invalid:focus {
   cursor: not-allowed;
 }
 :-moz-placeholder {
-  color: #84140b;
+  color: #681009;
 }
 ::-webkit-input-placeholder {
-  color: #84140b;
+  color: #681009;
 }
 .help-block {
   margin-top: 5px;
@@ -1764,15 +1764,15 @@ table .span12 {
   min-height: 20px;
   padding: 19px;
   margin-bottom: 20px;
-  background-color: rgba(48, 5, 5, 0.25);
+  background-color: #390905;
   border: 1px solid #eee;
   border: 1px solid rgba(0, 0, 0, 0.05);
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: inset 0 -1px 40px rgba(0, 0, 0, 0.9);
+  -moz-box-shadow: inset 0 -1px 40px rgba(0, 0, 0, 0.9);
+  box-shadow: inset 0 -1px 40px rgba(0, 0, 0, 0.9);
+  border-left: solid 5px #5f0e08;
+  border-right: solid 5px #71110a;
+  border-bottom: solid 3px #71110a;
 }
 .well blockquote {
   border-color: #ddd;

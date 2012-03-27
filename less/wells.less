@@ -5,13 +5,34 @@
   min-height: 20px;
   padding: 19px;
   margin-bottom: 20px;
-  background-color: @transparentBackground;
+  background-color: darken(@background, 20%);
   border: 1px solid #eee;
   border: 1px solid rgba(0,0,0,.05);
-  .border-radius(4px);
-  .box-shadow(inset 0 1px 1px rgba(0,0,0,.05));
+  // .border-radius(4px);
+  
+  .box-shadow(@navbarShadow);
+  
+  border-left: solid 5px darken(@background, 12%);
+  border-right: solid 5px darken(@background, 8%);
+  border-bottom: solid 3px darken(@background, 8%);
   blockquote {
     border-color: #ddd;
     border-color: rgba(0,0,0,.15);
   }
 }
+
+
+// .well {
+//   min-height: 20px;
+//   padding: 19px;
+//   margin-bottom: 20px;
+//   background-color: @transparentBackground;
+//   border: 1px solid #eee;
+//   border: 1px solid rgba(0,0,0,.05);
+//   .border-radius(4px);
+//   .box-shadow(inset 0 1px 1px rgba(0,0,0,.05));
+//   blockquote {
+//     border-color: #ddd;
+//     border-color: rgba(0,0,0,.15);
+//   }
+// }
