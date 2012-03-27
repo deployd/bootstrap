@@ -42,12 +42,9 @@ bootstrap:
 #
 
 gh-pages: docs
-	git commit -am 'docs'
-	rm -fr /tmp/docs \
-	&& cp -fr docs /tmp/docs \
-	&& git checkout gh-pages \
-	&& cp -fr /tmp/docs/* . \
-	&& echo "done"
+	rm -f ../bootstrap-gh-pages/assets/bootstrap.zip
+	node docs/build production
+	cp -r docs/* ../bootstrap-gh-pages
 
 #
 # WATCH LESS FILES
