@@ -1778,6 +1778,11 @@ table .span12 {
   border-color: #ddd;
   border-color: rgba(0, 0, 0, 0.15);
 }
+.well h2 {
+  background: #510c07;
+  margin: 0 -19px;
+  padding: 0 19px;
+}
 .fade {
   -webkit-transition: opacity 0.15s linear;
   -moz-transition: opacity 0.15s linear;
