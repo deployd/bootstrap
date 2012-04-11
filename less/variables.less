@@ -140,20 +140,20 @@
 // Navbar
 // -------------------------
 @navbarHeight:                    40px;
-@navbarBackground:                @blue;
-@navbarBackgroundHighlight:       darken(@blue, 10%);
+@navbarBackground:                @textColor;
+@navbarBackgroundHighlight:       @textColor;
 
-@navbarText:                      lighten(@blue, 20%);
-@navbarLinkColor:                 lighten(@blue, 20%);
-@navbarLinkColorHover:            @white;
+@navbarText:                      lighten(@textColor, 20%);
+@navbarLinkColor:                 lighten(@textColor, 20%);
+@navbarLinkColorHover:            @bodyBackground;
 @navbarLinkColorActive:           @navbarLinkColorHover;
 @navbarLinkBackgroundHover:       transparent;
 @navbarLinkBackgroundActive:      @navbarBackground;
 
 @navbarSearchBackground:          lighten(@navbarBackground, 25%);
-@navbarSearchBackgroundFocus:     @white;
+@navbarSearchBackgroundFocus:     @bodyBackground;
 @navbarSearchBorder:              darken(@navbarSearchBackground, 30%);
-@navbarSearchPlaceholderColor:    darken(@blue, 10%);
+@navbarSearchPlaceholderColor:    lighten(@textColor, 10%);
 
 
 // Hero unit
