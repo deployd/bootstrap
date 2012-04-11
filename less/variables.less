@@ -10,7 +10,7 @@
 
 // Grays
 // -------------------------
-@black:                 #000007;
+@black:                 #363535;
 @grayDarker:            #222227;
 @grayDark:              #333337;
 @gray:                  #555557;
@@ -34,7 +34,7 @@
 // Scaffolding
 // -------------------------
 @bodyBackground:        #FFFFF7;
-@textColor:             #363535;
+@textColor:             desaturate(darken(@bodyBackground, 60%), 90%);
 
 
 // Links
@@ -52,7 +52,7 @@
 
 @headingsFontFamily:    Bitter; // empty to use BS default, @baseFontFamily
 @headingsFontWeight:    bold;    // instead of browser default, bold
-@headingsColor:         inherit; // empty to use BS default, @textColor
+@headingsColor:         @black; // empty to use BS default, @textColor
 
 
 // Tables
@@ -140,11 +140,11 @@
 // Navbar
 // -------------------------
 @navbarHeight:                    40px;
-@navbarBackground:                @textColor;
-@navbarBackgroundHighlight:       @textColor;
+@navbarBackground:                @black;
+@navbarBackgroundHighlight:       @black;
 
-@navbarText:                      lighten(@textColor, 20%);
-@navbarLinkColor:                 lighten(@textColor, 20%);
+@navbarText:                      lighten(@black, 20%);
+@navbarLinkColor:                 lighten(@black, 20%);
 @navbarLinkColorHover:            @bodyBackground;
 @navbarLinkColorActive:           @navbarLinkColorHover;
 @navbarLinkBackgroundHover:       transparent;

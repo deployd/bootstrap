@@ -135,7 +135,7 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
-  color: #363535;
+  color: #6c6c58;
   background-color: #fffff7 !important;
 }
 a {
@@ -346,7 +346,7 @@ h6 {
   font-family: Bitter;
   text-transform: uppercase;
   font-weight: bold;
-  color: inherit;
+  color: #363535;
   text-rendering: optimizelegibility;
 }
 h1 small,
@@ -1786,7 +1786,7 @@ table .span24 {
   vertical-align: top;
   border-left: 4px solid transparent;
   border-right: 4px solid transparent;
-  border-top: 4px solid #000007;
+  border-top: 4px solid #363535;
   opacity: 0.3;
   filter: alpha(opacity=30);
   content: "";
@@ -1875,7 +1875,7 @@ table .span24 {
 .dropup .caret,
 .navbar-fixed-bottom .dropdown .caret {
   border-top: 0;
-  border-bottom: 4px solid #000007;
+  border-bottom: 4px solid #363535;
   content: "\2191";
 }
 .dropup .dropdown-menu,
@@ -1949,13 +1949,13 @@ table .span24 {
   font-size: 20px;
   font-weight: bold;
   line-height: 18px;
-  color: #000007;
+  color: #363535;
   text-shadow: 0 1px 0 #ffffff;
   opacity: 0.2;
   filter: alpha(opacity=20);
 }
 .close:hover {
-  color: #000007;
+  color: #363535;
   text-decoration: none;
   opacity: 0.4;
   filter: alpha(opacity=40);
@@ -2404,7 +2404,7 @@ input[type="submit"].btn.btn-mini {
   margin-top: 6px;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
-  border-top: 5px solid #000007;
+  border-top: 5px solid #363535;
 }
 .btn-primary .caret,
 .btn-warning .caret,
@@ -2653,7 +2653,7 @@ input[type="submit"].btn.btn-mini {
   border-bottom-color: #333337;
 }
 .nav > .dropdown.active > a:hover {
-  color: #000007;
+  color: #363535;
   cursor: pointer;
 }
 .nav-tabs .open .dropdown-toggle,
@@ -2938,10 +2938,10 @@ input[type="submit"].btn.btn-mini {
   transition: none;
 }
 .navbar-search .search-query:-moz-placeholder {
-  color: #504e4e;
+  color: #88886f;
 }
 .navbar-search .search-query::-webkit-input-placeholder {
-  color: #504e4e;
+  color: #88886f;
 }
 .navbar-search .search-query:focus,
 .navbar-search .search-query.focused {
@@ -3258,7 +3258,7 @@ input[type="submit"].btn.btn-mini {
   bottom: 0;
   left: 0;
   z-index: 1040;
-  background-color: #000007;
+  background-color: #363535;
 }
 .modal-backdrop.fade {
   opacity: 0;
@@ -3379,7 +3379,7 @@ input[type="submit"].btn.btn-mini {
   margin-left: -5px;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
-  border-top: 5px solid #000007;
+  border-top: 5px solid #363535;
 }
 .tooltip.left .tooltip-arrow {
   top: 50%;
@@ -3387,7 +3387,7 @@ input[type="submit"].btn.btn-mini {
   margin-top: -5px;
   border-top: 5px solid transparent;
   border-bottom: 5px solid transparent;
-  border-left: 5px solid #000007;
+  border-left: 5px solid #363535;
 }
 .tooltip.bottom .tooltip-arrow {
   top: 0;
@@ -3395,7 +3395,7 @@ input[type="submit"].btn.btn-mini {
   margin-left: -5px;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
-  border-bottom: 5px solid #000007;
+  border-bottom: 5px solid #363535;
 }
 .tooltip.right .tooltip-arrow {
   top: 50%;
@@ -3403,7 +3403,7 @@ input[type="submit"].btn.btn-mini {
   margin-top: -5px;
   border-top: 5px solid transparent;
   border-bottom: 5px solid transparent;
-  border-right: 5px solid #000007;
+  border-right: 5px solid #363535;
 }
 .tooltip-inner {
   max-width: 200px;
@@ -3411,7 +3411,7 @@ input[type="submit"].btn.btn-mini {
   color: #ffffff;
   text-align: center;
   text-decoration: none;
-  background-color: #000007;
+  background-color: #363535;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -3447,7 +3447,7 @@ input[type="submit"].btn.btn-mini {
   margin-left: -5px;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
-  border-top: 5px solid #000007;
+  border-top: 5px solid #363535;
 }
 .popover.right .arrow {
   top: 50%;
@@ -3455,7 +3455,7 @@ input[type="submit"].btn.btn-mini {
   margin-top: -5px;
   border-top: 5px solid transparent;
   border-bottom: 5px solid transparent;
-  border-right: 5px solid #000007;
+  border-right: 5px solid #363535;
 }
 .popover.bottom .arrow {
   top: 0;
@@ -3463,7 +3463,7 @@ input[type="submit"].btn.btn-mini {
   margin-left: -5px;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
-  border-bottom: 5px solid #000007;
+  border-bottom: 5px solid #363535;
 }
 .popover.left .arrow {
   top: 50%;
@@ -3471,7 +3471,7 @@ input[type="submit"].btn.btn-mini {
   margin-top: -5px;
   border-top: 5px solid transparent;
   border-bottom: 5px solid transparent;
-  border-left: 5px solid #000007;
+  border-left: 5px solid #363535;
 }
 .popover .arrow {
   position: absolute;
@@ -3482,7 +3482,7 @@ input[type="submit"].btn.btn-mini {
   padding: 3px;
   width: 280px;
   overflow: hidden;
-  background: #000007;
+  background: #363535;
   background: rgba(0, 0, 0, 0.8);
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
