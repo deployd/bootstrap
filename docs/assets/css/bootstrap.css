@@ -278,8 +278,7 @@ html {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cf5d00', endColorstr='#880d0d', GradientType=0);
 }
 body {
-  /*  background-image: url('../img/bg-transparent.png');*/
-
+  background-image: url('../img/bg-transparent.png');
 }
 .container {
   width: 940px;
