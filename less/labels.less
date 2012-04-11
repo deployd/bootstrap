@@ -1,16 +1,38 @@
 // LABELS
 // ------
 
+// Base
 .label {
-  padding: 1px 3px 2px;
-  font-size: @baseFontSize * .75;
+  padding: 1px 4px 2px;
+  font-size: @baseFontSize * .846;
   font-weight: bold;
-  color: @foreground;
-  text-transform: uppercase;
-  background-color: darken(@grayLight, 20%);
+  line-height: 13px; // ensure proper line-height if floated
+  color: @white;
+  vertical-align: middle;
+  white-space: nowrap;
+  text-shadow: 0 -1px 0 rgba(0,0,0,.25);
+  background-color: @grayLight;
   .border-radius(3px);
 }
-.label-important { background-color: @red; }
-.label-warning   { background-color: @orange; }
-.label-success   { background-color: @green; }
-.label-info      { background-color: darken(saturate(@blue, 50%), 20%); }
+
+// Hover state
+.label:hover {
+  color: @white;
+  text-decoration: none;
+}
+
+// Colors
+.label-important        { background-color: @red; }
+.label-important:hover  { background-color: darken(@red, 10%); }
+
+.label-warning          { background-color: @orange; }
+.label-warning:hover    { background-color: darken(@orange, 10%); }
+
+.label-success          { background-color: @green; }
+.label-success:hover    { background-color: darken(@successText, 10%); }
+
+.label-info             { background-color: @blue; }
+.label-info:hover       { background-color: darken(@infoText, 10%); }
+
+.label-inverse             { background-color: @grayDark; }
+.label-inverse:hover       { background-color: darken(@grayDark, 10%); }

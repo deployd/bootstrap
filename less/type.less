@@ -13,7 +13,7 @@ p {
   line-height: @baseLineHeight;
   small {
     font-size: @baseFontSize - 2;
-    color: @foreground;
+    color: @grayLight;
   }
 }
 .lead {
@@ -28,12 +28,14 @@ p {
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
-  font-weight: bold;
-  color: @foreground;
+  font-family: @headingsFontFamily;
+  text-transform: uppercase;
+  font-weight: @headingsFontWeight;
+  color: @headingsColor;
   text-rendering: optimizelegibility; // Fix the character spacing for headings
   small {
     font-weight: normal;
-    color: @foreground;
+    color: @grayLight;
   }
 }
 h1 {
@@ -110,7 +112,8 @@ ol {
 li {
   line-height: @baseLineHeight;
 }
-ul.unstyled {
+ul.unstyled,
+ol.unstyled {
   margin-left: 0;
   list-style: none;
 }
@@ -125,9 +128,22 @@ dd {
 }
 dt {
   font-weight: bold;
+  line-height: @baseLineHeight - 1; // fix jank Helvetica Neue font bug
 }
 dd {
   margin-left: @baseLineHeight / 2;
+}
+// Horizontal layout (like forms)
+.dl-horizontal {
+  dt {
+    float: left;
+    clear: left;
+    width: 120px;
+    text-align: right;
+  }
+  dd {
+    margin-left: 130px;
+  }
 }
 
 // MISC
@@ -137,8 +153,8 @@ dd {
 hr {
   margin: @baseLineHeight 0;
   border: 0;
-  border-top: 1px solid #e5e5e5;
-  border-bottom: 1px solid @foreground;
+  border-top: 1px solid @hrBorder;
+  border-bottom: 1px solid @white;
 }
 
 // Emphasis
@@ -149,16 +165,17 @@ em {
   font-style: italic;
 }
 .muted {
-  color: desaturate(lighten(@background, 20%), 30%);
-  text-shadow: 0 1px 0 rgba(0,0,0,0.8);
+  color: @grayLight;
 }
 
 // Abbreviations and acronyms
-abbr {
-  font-size: 90%;
-  text-transform: uppercase;
+abbr[title] {
   border-bottom: 1px dotted #ddd;
   cursor: help;
+}
+abbr.initialism {
+  font-size: 90%;
+  text-transform: uppercase;
 }
 
 // Blockquotes
@@ -196,7 +213,7 @@ blockquote {
 // Quotes
 q:before,
 q:after,
-blockquote:before, 
+blockquote:before,
 blockquote:after {
   content: "";
 }

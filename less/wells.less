@@ -1,34 +1,27 @@
 // WELLS
 // -----
 
-@wellPadding: 19px;
-
 .well {
   min-height: 20px;
-  padding: @wellPadding;
+  padding: 19px;
   margin-bottom: 20px;
-  background-color: darken(@background, 20%);
-  
-  .box-shadow(@navbarShadow);
-
+  background-color: @bodyBackground;
+  border: 1px solid #eee;
+  border: 1px solid rgba(0,0,0,.05);
+  .border-radius(4px);
+  .box-shadow(inset 0 1px 20px rgba(0,0,0,.05));
   blockquote {
-    border-color: #ddd;
+    border-color: @gray;
     border-color: rgba(0,0,0,.15);
   }
 }
 
-.well h1, .well h2, .well h3, .well h4, .well h5, .well h6 {
-  background: 0 -800px url('../img/bg-old.png');
-  .box-shadow(@navbarShadow);
-  margin: 0 -@wellPadding;
-  margin-top: -@wellPadding - 1px;
-  padding: @wellPadding / 2 @wellPadding;
-  margin-bottom: @wellPadding;
+// Sizes
+.well-large {
+  padding: 24px;
+  .border-radius(6px);
 }
-
-.well > .well {
-  background: 0 -800px url('../img/bg-old.png');
-  border-left: solid 5px darken(@background, 22%);
-  border-right: solid 5px darken(@background, 22%);
-  border-bottom: solid 3px darken(@background, 22%);
+.well-small {
+  padding: 9px;
+  .border-radius(3px);
 }

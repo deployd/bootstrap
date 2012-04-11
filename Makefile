@@ -10,6 +10,7 @@ WATCHR ?= `which watchr`
 #
 
 docs: bootstrap
+	rm docs/assets/bootstrap.zip
 	zip -r docs/assets/bootstrap.zip bootstrap
 	rm -r bootstrap
 	lessc ${BOOTSTRAP_LESS} > ${BOOTSTRAP}
@@ -17,7 +18,6 @@ docs: bootstrap
 	node docs/build
 	cp img/* docs/assets/img/
 	cp js/*.js docs/assets/js/
-	cp js/tests/vendor/jquery.js docs/assets/js/
 	cp js/tests/vendor/jquery.js docs/assets/js/
 
 #
@@ -35,10 +35,13 @@ bootstrap:
 	lessc ${BOOTSTRAP_RESPONSIVE_LESS} > bootstrap/css/bootstrap-responsive.css
 	lessc --compress ${BOOTSTRAP_RESPONSIVE_LESS} > bootstrap/css/bootstrap-responsive.min.css
 	cat js/bootstrap-transition.js js/bootstrap-alert.js js/bootstrap-button.js js/bootstrap-carousel.js js/bootstrap-collapse.js js/bootstrap-dropdown.js js/bootstrap-modal.js js/bootstrap-tooltip.js js/bootstrap-popover.js js/bootstrap-scrollspy.js js/bootstrap-tab.js js/bootstrap-typeahead.js > bootstrap/js/bootstrap.js
-	uglifyjs -nc bootstrap/js/bootstrap.js > bootstrap/js/bootstrap.min.js
+	uglifyjs -nc bootstrap/js/bootstrap.js > bootstrap/js/bootstrap.min.tmp.js
+	echo "/**\n* Bootstrap.js by @fat & @mdo\n* Copyright 2012 Twitter, Inc.\n* http://www.apache.org/licenses/LICENSE-2.0.txt\n*/" > bootstrap/js/copyright.js
+	cat bootstrap/js/copyright.js bootstrap/js/bootstrap.min.tmp.js > bootstrap/js/bootstrap.min.js
+	rm bootstrap/js/copyright.js bootstrap/js/bootstrap.min.tmp.js
 
 #
-#  by ritch, no need to checkout branches in separate dirs
+# MAKE FOR GH-PAGES 4 FAT & MDO ONLY (O_O  )
 #
 
 gh-pages: docs
@@ -55,4 +58,4 @@ watch:
 	watchr -e "watch('less/.*\.less') { system 'make' }"
 
 
-.PHONY: dist docs watch gh-pages bootstrap
+.PHONY: docs watch gh-pages
