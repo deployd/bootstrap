@@ -2620,6 +2620,10 @@ input[type="submit"].btn.btn-mini {
   border-color: #ddd;
   z-index: 2;
 }
+.nav-tabs.nav-stacked > .active > a {
+  background-color: #429e96;
+  color: #ffffff;
+}
 .nav-pills.nav-stacked > li > a {
   margin-bottom: 3px;
 }
@@ -2794,6 +2798,26 @@ input[type="submit"].btn.btn-mini {
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+}
+.navbar-inner .thumbnail {
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  margin: 14px 0 0 auto;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+.navbar-inner .thumbnail img {
+  width: 30px;
+}
+.navbar-inner .thumbnail a {
+  padding: 0 !important;
 }
 .navbar .container {
   width: auto;
@@ -3002,6 +3026,7 @@ input[type="submit"].btn.btn-mini {
   color: #696868;
   text-decoration: none;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  font-size: 1.2em;
 }
 .navbar .nav > li > a:hover {
   background-color: transparent;
@@ -3012,7 +3037,7 @@ input[type="submit"].btn.btn-mini {
 .navbar .nav .active > a:hover {
   color: #fffff7;
   text-decoration: none;
-  background-color: #363535;
+  background-color: #313030;
 }
 .navbar .divider-vertical {
   height: 40px;
